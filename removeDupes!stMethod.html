@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // arr1=[8,8,0,1,9,9,1,6,7,7];
+        var num = [2, 3,3, 2, 5, 6, 8, 5, 7];
+        function removeDupes1(arr){
+        var num2 = [];
+        for (var i = 0; i < num.length; i++) {
+            let found=false;
+            for (var j = 0; j < num2.length; j++) {
+
+                if (num[i] == num2[j]) {
+                    found=true;
+                    break;
+                }
+            }
+            if(!found){
+                num2.push(num[i]);
+            }
+        }
+        console.log(num2);
+
+        }
+        removeDupes1(num);
+        //question is not give duplicates
+        //to remove duplicates//nooob//give me 5mnts//let me do it
+    </script>
+</body>
+</html>

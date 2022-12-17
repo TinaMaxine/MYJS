@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const input1 = [1, 2, 3, 3, 4, 5,2, 6,3,6,1];
+        const input2 = [1, 2, 3, 3, 4, 5,2, 6,3,6,7];
+        const input3 = [8,8,0,1,9,9,1,6,7,7];
+
+
+        function removeDuplicate(arr) {
+        let length = 0;
+        const tmp = {};
+        
+        for (let i = 0; i < arr.length; i++) {
+            // console.log("hhhh"+tmp);
+            // console.log("gggg"+!tmp[arr[i]]);
+            // console.log(tmp[arr[1]]);
+            if (!tmp[arr[i]]) {
+                // console.log(tmp);
+                // console.log(arr);
+            tmp[arr[i]] = 1;
+            console.log(tmp)
+            arr[length] = arr[i];
+            length++;
+            }
+        }//im doing rough work give me some time
+    
+        // the last element is not a duplicate
+        // if (!tmp[arr[arr.length-1]]) {
+        //     length--;
+        // }
+        arr.length = length;
+        return arr;
+}
+    console.log(removeDuplicate(input1));
+    console.log(removeDuplicate(input2));
+    console.log(removeDuplicate(input3));
+    console.log(input3.sort());
+
+
+    </script>
+</body>
+</html>

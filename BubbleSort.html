@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var a =[8,5,2,6,12]
+        function swap(a,b,i){
+            var temp;
+            temp = a[i];
+            a[i]=a[b];
+            a[b]=temp;
+}
+    function bubblesort(a){
+        for ( var n =0; n< a.length; n++){
+            for ( var m =0; m< (a.length-n); m++){
+                if(a[m]>a[m+1]){
+                    swap(a,m,m+1)
+                    }
+                    
+        }
+    }
+    return a
+}
+    console.log(bubblesort(a))
+    </script>
+</body>
+</html>

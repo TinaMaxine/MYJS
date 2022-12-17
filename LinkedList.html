@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class node
+{
+    constructor (value)
+    {
+        this.value =value;
+        this.next =null;
+    }
+}
+class linkedList
+{
+//linked list structure
+    constructor(value) 
+    {
+        this.head ={
+            value : value,
+            next : null
+        }
+      this.tail=this.head
+        this.length =1
+        // this.value=value
+        // this.next =null
+
+    }
+    //appending tail
+    append(value){
+        const newnode =new node(value)
+        if(this.head==null){
+            this.head =Node
+        
+        
+        }
+        else{
+            this.tail.next=newnode
+            this.tail=newnode
+            this.length++
+        }
+        
+    }
+    printList(){
+        var curr=this.head;
+        let output=[];
+        while(curr!==null){
+            output.push(curr.value)
+            curr=curr.next;
+        }
+        console.log(output)
+    }
+    prepend(value){
+        const newnode =new node(value);
+        newnode.next=this.head;
+        this.head=newnode;
+        this.length++;
+        return this
+
+    }
+    insert(value,index){
+        const newNode=new node(value);
+        let i=1;
+        let previousNode=this.head;
+        while(i<index){
+            previousNode=previousNode.next;
+            i++;
+        }
+        newNode.next=previousNode.next;
+        previousNode.next=newNode;
+        this.length++;
+        return this
+    }
+    // insert(value,index){// to add in middle
+    //         var x = new node(value);
+    //         let i=1;    
+    //         let previousnode= this.head; 
+    //         while(i<index){ //used for traversing in linked list
+    //             previousnode= previousnode.next;
+    //             i++;
+    //         }
+    //         x.next=previousnode.next;
+    //         previousnode.next=x;
+    //         return this;
+    //     }
+    search(value){
+    let currentHead= this.head
+    while (currentHead !== null){
+        if (currentHead.value == value)return true;
+        currentHead=currentHead.next
+    }
+    return false
+  }
+}
+
+
+
+
+
+var linkedListObject = new linkedList(1000);
+console.log(linkedListObject);
+
+linkedListObject.append(342);
+linkedListObject.append(7643);
+linkedListObject.insert(10,2);
+linkedListObject.printList();
+console.log(linkedListObject.search(10));
+
+
+
+//creating function for printing every linked list
+
+    </script>
+    
+</body>
+</html>

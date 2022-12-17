@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSLIst</title>
+    <style>
+        ul li img{
+            width: 200px;
+            height: 300px;
+        }
+        ul li:hover{
+            color:chartreuse;
+            font-size: larger;
+        }
+    </style>
+</head>
+<body>
+    <!-- <div id="but1">
+            hello hi noob
+    </div> -->
+    <!-- <ul>
+        <li>
+            apple
+        </li>
+        <li>pear</li>
+    </ul> -->
+        <!-- <div id="checkeventlistner">hi moon</div> -->
+        <button id="but1" type="button" onclick="myFunc()">View List</button>
+    <script>
+        function myFunc(){
+            var books=[{
+                title:'Revolution 2020',
+                Author:'Chethan Bhagath',
+                img:'https://trendmagnet.in/image/cache/data/Shirts/revolution-2020-400x400-imadgya3ypqzn5zg-600x800.jpeg',
+                alreadyRead:true
+            },
+            {
+                title:'Poniyan Selvan',
+                Author:'Kalki',
+                img:'https://m.media-amazon.com/images/I/71CW2McyifL.jpg',
+                alreadyRead:true
+            },
+            {
+                title:'Pride and Prejudice',
+                Author:'Jane Austen',
+                img:'https://kbimages1-a.akamaihd.net/afcd8653-3b27-4423-bee9-570fb1441aed/353/569/90/False/pride-and-prejudice-71.jpg',
+                alreadyRead:true
+            },
+        ]
+        var bookList=document.createElement('ul');
+        for(var i=0;i<books.length;i++){
+            var bookItem=document.createElement('li');
+            var bookImg=document.createElement('img');
+            bookImg.src=books[i].img;
+            bookItem.appendChild(bookImg);
+            var bookDescription=document.createTextNode(books[i].title+' by '+books[i].Author);
+            bookItem.appendChild(bookDescription);
+            // if(books[i].alreadyRead){bookItem.style.color="green";}//
+            bookList.appendChild(bookItem);
+        }
+        document.body.appendChild(bookList);
+        const hcolor=document.getElementById('but1');
+        hcolor.addEventListener('mouseover', function handleMouseOver(){
+            hcolor.style.color="red";
+        });0
+        hcolor.addEventListener('mouseout', function handleMouseOver(){
+            hcolor.style.color="blue";
+        });
+        
+        }
+        const hcolor1=document.getElementsByTagName("li");
+        hcolor1[0].addEventListener('mouseover', function handleMouseOver(){
+            hcolor1[0].style.color="purple";
+        });0
+        hcolor1[0].addEventListener('mouseout', function handleMouseOver(){
+            hcolor1[0].style.color="aqua";
+        });
+    </script>
+</body>
+</html>
