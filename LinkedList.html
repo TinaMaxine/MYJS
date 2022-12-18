@@ -96,6 +96,86 @@ class linkedList
     }
     return false
   }
+  removeHead(){
+    this.head=this.head.next;
+    this.length--;
+    return this;
+  }
+  removeTail() {
+    var previous = this.head;
+    while (previous.next.next !== null) {
+      previous = previous.next;
+    }
+    previous.next = null;
+    this.length--;
+    return this;
+  }
+//   removeByIndex(index){
+//     var current, previous,i=0;
+//     current=this.head;
+//     previous=current;
+//         if(index===0){
+//             this.head=current.next;
+//         this.length--;
+//         return this;
+//         }
+//         else{
+//             while(i<index){
+//                 i++;
+//                 previous=current;
+//                 current=current.next;
+                
+//             }
+//             previous.next=current.next;
+//         }
+//         this.length--;
+//         return current.element;
+
+//   }
+deltebyindex(index)
+            {
+                if(index == 0)
+                {
+                this.head=this.head.next;
+                this.length--;
+                return this;
+                }
+                else{
+                              
+                    var previous = this.head;
+                    var count =0;
+                    while(count<index)
+                    {
+                        count++;
+                        previous=previous.next;
+
+                        
+                    }
+                    previous.next=previous.next.next;
+                    this.length--;
+                
+                return this;
+            }
+
+
+}
+ShakuldeleteAtIndex(index){
+       if(index === 0){
+        this.head = this.head.next;
+        this.length--;
+        return this;
+       }
+    let count = 1;
+    let previousNode = this.head;
+    while(count < index){
+        previousNode = previousNode.next;
+        count++;
+    }
+    previousNode.next = previousNode.next.next;
+    this.length--;
+    return this;
+    }
+
 }
 
 
@@ -109,7 +189,14 @@ linkedListObject.append(342);
 linkedListObject.append(7643);
 linkedListObject.insert(10,2);
 linkedListObject.printList();
-console.log(linkedListObject.search(10));
+// console.log(linkedListObject.search(10));
+// linkedListObject.removeHead();
+linkedListObject.removeTail();
+linkedListObject.printList();
+// linkedListObject.removeByIndex(1);
+// linkedListObject.printList();
+linkedListObject.deltebyindex(1);
+linkedListObject.printList();
 
 
 
