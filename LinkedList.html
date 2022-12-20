@@ -35,19 +35,18 @@ class linkedList
     append(value){
         const newnode =new node(value)
         if(this.head==null){
-            this.head =Node
-        
-        
+            this.head =Node // newnode
         }
         else{
             this.tail.next=newnode
             this.tail=newnode
-            this.length++
+                          //  h           t
+            this.length++ // (v,n) (v,n) (v,n) (v,n)
         }
         
     }
     printList(){
-        var curr=this.head;
+        var curr=this.head; // this.head.next.next.value
         let output=[];
         while(curr!==null){
             output.push(curr.value)
@@ -55,12 +54,14 @@ class linkedList
         }
         console.log(output)
     }
-    prepend(value){
+    prepend(value){ // var abc = LinkedList(3); 
+                    // var xyz = abc.prepend(4)
+                    // xyz.printList()
         const newnode =new node(value);
         newnode.next=this.head;
         this.head=newnode;
         this.length++;
-        return this
+        // return this
 
     }
     insert(value,index){
@@ -74,7 +75,7 @@ class linkedList
         newNode.next=previousNode.next;
         previousNode.next=newNode;
         this.length++;
-        return this
+        // return this
     }
     // insert(value,index){// to add in middle
     //         var x = new node(value);
@@ -189,14 +190,16 @@ linkedListObject.append(342);
 linkedListObject.append(7643);
 linkedListObject.insert(10,2);
 linkedListObject.printList();
+dummy = linkedListObject.prepend(242);
+dummy.printList();
 // console.log(linkedListObject.search(10));
 // linkedListObject.removeHead();
-linkedListObject.removeTail();
-linkedListObject.printList();
+// linkedListObject.removeTail();
+// linkedListObject.printList();
 // linkedListObject.removeByIndex(1);
 // linkedListObject.printList();
-linkedListObject.deltebyindex(1);
-linkedListObject.printList();
+// linkedListObject.deltebyindex(1);
+// linkedListObject.printList();
 
 
 
