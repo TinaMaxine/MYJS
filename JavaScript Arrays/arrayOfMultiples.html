@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         body{
+            background: yellowgreen;
+        }
+        pre{
+            font-size: 20px;
+            color:  blue;
+        }
+    </style>
+</head>
+
+<body>
+    <pre>Q3. Create a function that takes two numbers as arguments (num, length) and returns an array of multiples of num
+        until the array length reaches length.
+        Example: -arrayOfMultiples(12, 10) [12, 24, 36, 48, 60, 72, 84, 96, 108, 120]
+        Notes: -Notice that num is also included in the returned array.<pre>
+</body>
+<script>
+    var num=parseInt(window.prompt("Enter Num Value"))
+    var length=parseInt(window.prompt("Enter Length Value"))
+    var multiples=[]
+    function multiple(num,length){
+        for(var i=1;i<length+1;i++){
+            multiples.push( num*i)
+        }
+        return multiples
+    }
+    console.log(multiple(num,length));
+</script>
+</html>

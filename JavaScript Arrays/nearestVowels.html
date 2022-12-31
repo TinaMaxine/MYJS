@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        body {
+            background: yellowgreen;
+        }
+
+        pre {
+            font-size: 20px;
+            color: blue;
+        }
+    </style>
+</head>
+
+<body>
+    <pre>
+        Given a letter, created a function which returns the nearest vowel to the letter. If two vowels are
+        equidistant to the given letter, return the earlier vowel.
+        Examples: -
+        nearestVowel("b") "a"
+        nearestVowel("s") "u"
+        nearestVowel("i") "i"
+        Notes: -
+        All letters will be given in lowercase.
+        There will be no alphabet wrapping involved, meaning the closest vowel to "z" should return "u", not "a".
+
+    </pre>
+    <div>
+
+        <h1  id="que"></h1>
+    </div>
+    <div>
+        
+        <h1 id="ans"></h1>
+
+    </div>
+</body>
+<script>
+
+    var que=document.querySelector("#que")
+    var target = window.prompt("enter any alphabet in smallcases only")
+    que.innerText="Your input was : "+ target
+    
+    var alphabets = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
+    var vowels = [0, 4, 8, 14, 20]
+    var rightindex = alphabets.indexOf(target)
+    var leftindex = rightindex
+    var index = rightindex
+
+    vow1 = []
+    vow2 = []
+    // here i am using while function so we do not run code if we got nearest vowels
+    while (vow1.length < 1 && vow2.length < 1) {
+        for (var i = 0; i < 6; i++) {
+            for (var j = 0; j < 5; j++) {
+                if (rightindex == vowels[j]) {
+                    vow1.push(rightindex)
+
+                }
+            }
+            rightindex++
+        }
+        // here i am incrasing index in above function so i can reach to nearest right side vowels      
+        // here i am decreasing index in below function so i can reach to nearest left side vowels      
+        for (var i = 0; i < 6; i++) {
+            for (var j = 0; j < 6; j++) {
+                if (leftindex == vowels[j]) {
+                    vow2.push(leftindex)
+
+                }
+            }
+            leftindex--
+        }
+    }
+    // here i am calculating distance of vowels found nearest on right and left
+    diff1 = vow1[0] - index
+    diff = index - vow2[0]
+    // here if alphabets are of after u then else condition should execute
+    var x = document.querySelector("#ans")
+
+    if (index < 20) {
+        if (diff1 > diff) {
+            x.innerText = "It's nearest vowel is : "+alphabets[vow2[0]];
+        }
+        if (diff1 < diff) {
+            x.innerText = "It's nearest vowel is : "+alphabets[vow1[0]];
+        }
+        if (diff == diff1) {
+            x.innerText = "It's nearest vowel is : "+alphabets[vow2[0]];
+        }
+
+    }
+
+    else {
+        x.innerText = "It's nearest vowel is : "+alphabets[vow2[0]];
+    }
+    x.style.color="green"
+</script>
+
+</html>

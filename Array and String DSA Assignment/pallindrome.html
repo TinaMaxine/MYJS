@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>
+        Question 3: Write a program to check whether a String is palindrome or not .
+
+        Note :A Palindrome String is a string that is the same after the reverse .
+
+        Example : LOL , MADAM.
+    </h1>
+</body>
+<script>
+    // var str="madam"  
+    var str="LOL"
+    str=Array.from(str)
+    var flag=0
+    for(var i=0;i<str.length; i++){
+        if(str[i]!=str[str.length-i-1]){
+            flag=1
+        }
+    }
+    if(flag==0) console.log("Yes. this is Pallindrome");
+    else console.log("No, this is not Pallindrome");
+</script>
+</html>
