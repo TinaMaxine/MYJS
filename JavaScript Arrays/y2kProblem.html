@@ -6,38 +6,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>y2kProblem</title>
-    <style>
-        body{
-            background: yellowgreen;
-        }
-        pre{
-            font-size: 20px;
-            color:  blue;
-        }
-        script{
-            background: red;
-            color: blue;
-        }
-    </style>
-</head>
+    </head>
 
 <body>
-    <pre>Q1: Y2K problem: Databases written in 1970's used 2-digit fields to represent the year e.g., 77, 80 instead of
-        1977, 1980.However with the year 2000 nearby all these fields had to be changed to be 4-digit date. Write a
-        program to change a given 2-digit year to a 4-digit year. Remember that if the 2-digit number is less than 35 it
-        means it’s a year in the 2000-year range. E.g., 15 would mean 2015 not 1915.
-    </pre>
 </body>
 <script>
 
-var num=parseInt(window.prompt("Enter a value"))
-console.log(yearcheck(num));
-function yearcheck(num){
-     if (num<35){
-    document.write (num+2000)
+var value=10
+console.log(Year(value));
+function Year(value){
+     if (value<35){
+    console.log(value+2000)
     }
     else {
-        document.write (num+1900)
+        console.log(value+1900)
     }
 }
 
