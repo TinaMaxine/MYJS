@@ -20,65 +20,54 @@
     </div>
 </body>
 <script>
+    console.log("change value in console to check its nearest vowel")
+  var target = x
+    console.log("Input:" + target)
 
-    var que=document.querySelector("#que")
-    var target = window.prompt("enter any alphabet in smallcases only")
-    que.innerText="Your input was : "+ target
-    
     var alphabets = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
     var vowels = [0, 4, 8, 14, 20]
-    var rightindex = alphabets.indexOf(target)
-    var leftindex = rightindex
-    var index = rightindex
+    var rightside = alphabets.indexOf(target)
+    var leftside = rightside
+    var index = rightside
 
-    vow1 = []
-    vow2 = []
-    // here i am using while function so we do not run code if we got nearest vowels
-    while (vow1.length < 1 && vow2.length < 1) {
+    vowelarray1 = []
+    vowelarray2 = []
+    while (vowelarray1.length < 1 && vowelarray2.length < 1) {
         for (var i = 0; i < 6; i++) {
             for (var j = 0; j < 5; j++) {
-                if (rightindex == vowels[j]) {
-                    vow1.push(rightindex)
-
+                if (rightside == vowels[j]) {
+                    vowelarray1.push(rightside)
                 }
             }
-            rightindex++
+            rightside++
         }
-        // here i am incrasing index in above function so i can reach to nearest right side vowels      
-        // here i am decreasing index in below function so i can reach to nearest left side vowels      
         for (var i = 0; i < 6; i++) {
             for (var j = 0; j < 6; j++) {
-                if (leftindex == vowels[j]) {
-                    vow2.push(leftindex)
-
+                if (leftside == vowels[j]) {
+                    vowelarray2.push(leftside)
                 }
             }
-            leftindex--
+            leftside--
         }
     }
-    // here i am calculating distance of vowels found nearest on right and left
-    diff1 = vow1[0] - index
-    diff = index - vow2[0]
-    // here if alphabets are of after u then else condition should execute
-    var x = document.querySelector("#ans")
-
+    firstseconddifferenceerence = vowelarray1[0] - index
+    seconddifference = index - vowelarray2[0]
     if (index < 20) {
-        if (diff1 > diff) {
-            x.innerText = "It's nearest vowel is : "+alphabets[vow2[0]];
+        if (firstseconddifferenceerence > seconddifference) {
+            console.log("Output: " + alphabets[vowelarray2[0]]);
         }
-        if (diff1 < diff) {
-            x.innerText = "It's nearest vowel is : "+alphabets[vow1[0]];
+        if (firstseconddifferenceerence < seconddifference) {
+            console.log("Output: " + alphabets[vowelarray1[0]]);
         }
-        if (diff == diff1) {
-            x.innerText = "It's nearest vowel is : "+alphabets[vow2[0]];
+        if (seconddifference == firstseconddifferenceerence) {
+            console.log("Output: " + alphabets[vowelarray2[0]]);
         }
 
     }
 
     else {
-        x.innerText = "It's nearest vowel is : "+alphabets[vow2[0]];
+        console.log("Output: " + alphabets[vowelarray2[0]]);
     }
-    x.style.color="green"
 </script>
 
 </html>
