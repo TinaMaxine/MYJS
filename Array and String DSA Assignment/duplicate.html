@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>
+        Question 1 : Write a program to print to duplicate elements of an array .
+        </br>
+        Sample_input : [1,1,2,3,3,4,5,6,6]
+        </br>
+
+        Sample_ouptut : 1,3,6
+    </h1>
+</body>
+<script>
+    var input = [1, 1, 2, 3, 3, 3, 4, 4, 4, 4, 4, 4, 5, 6, 6]
+    var duplicate = []
+    for (var i = 0; i < input.length; i++) {
+        //here we are comparing this this element with its next one
+        if (input[i] == input[i + 1]) {
+            // here we are checking if this item already exists in duplicate array then we will  not push it 
+            if (duplicate[duplicate.length - 1] != input[i]) {
+                duplicate.push(input[i])
+
+            }
+        }
+    }
+    console.log("duplicate", duplicate);
+</script>
+
+</html>

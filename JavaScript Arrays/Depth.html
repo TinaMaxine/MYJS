@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let arr = ([1, [2, [3, 4]]]);//array given in problem statement
+        // let arr =([1, 2, 3, 4]) ; 
+        let depth = 0;
+        function getArrayDepth(array){
+        if(Array.isArray(array)){
+        ++depth;
+        for(let i=0;i<array.length;i++){
+            if(Array.isArray(array[i])) {
+                arr = arr.flat();//new array with all sub-array elements 
+                getArrayDepth(arr) ;
+            }
+        }
+        return `Array is of depth = ${depth}` 
+    }
+    
+}
+console.log(getArrayDepth(arr))
+</script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+
+        <h1  id="que"></h1>
+    </div>
+    <div>
+        
+        <h1 id="ans"></h1>
+
+    </div>
+</body>
+<script>
+    console.log("change value in console to check its nearest vowel")
+  var target = x
+    console.log("Input:" + target)
+
+    var alphabets = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
+    var vowels = [0, 4, 8, 14, 20]
+    var rightside = alphabets.indexOf(target)
+    var leftside = rightside
+    var index = rightside
+
+    vowelarray1 = []
+    vowelarray2 = []
+    while (vowelarray1.length < 1 && vowelarray2.length < 1) {
+        for (var i = 0; i < 6; i++) {
+            for (var j = 0; j < 5; j++) {
+                if (rightside == vowels[j]) {
+                    vowelarray1.push(rightside)
+                }
+            }
+            rightside++
+        }
+        for (var i = 0; i < 6; i++) {
+            for (var j = 0; j < 6; j++) {
+                if (leftside == vowels[j]) {
+                    vowelarray2.push(leftside)
+                }
+            }
+            leftside--
+        }
+    }
+    firstseconddifferenceerence = vowelarray1[0] - index
+    seconddifference = index - vowelarray2[0]
+    if (index < 20) {
+        if (firstseconddifferenceerence > seconddifference) {
+            console.log("Output: " + alphabets[vowelarray2[0]]);
+        }
+        if (firstseconddifferenceerence < seconddifference) {
+            console.log("Output: " + alphabets[vowelarray1[0]]);
+        }
+        if (seconddifference == firstseconddifferenceerence) {
+            console.log("Output: " + alphabets[vowelarray2[0]]);
+        }
+
+    }
+
+    else {
+        console.log("Output: " + alphabets[vowelarray2[0]]);
+    }
+</script>
+
+</html>
