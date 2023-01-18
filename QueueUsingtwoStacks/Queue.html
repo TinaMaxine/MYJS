@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Queue</title>
+</head>
+<body>
+    <script>
+        class Queue {
+    constructor() {
+       this.enqueueStack = [];
+       this.dequeueStack = [];
+    }
+    enqueue(item) {
+       this.enqueueStack.push(item);
+    }
+    dequeue() {
+       if (this.dequeueStack.length === 0) {
+    
+          // move everything from enqueueStack to dequeueStack
+          while (this.enqueueStack.length > 0) {
+             const item = this.enqueueStack.pop();
+             this.dequeueStack.push(item);
+          }
+       }
+ 
+       // dequeue from dequeueStack
+       return this.dequeueStack.pop();
+    }
+ }
+ 
+ let vari=new Queue;
+ vari.enqueue(5);
+ vari.enqueue(10);
+ vari.enqueue(15);
+ vari.enqueue(20);
+ vari.enqueue(25);
+ vari.dequeue();
+ vari.dequeue();
+ vari.dequeue();
+ vari.enqueue(17);
+ vari.enqueue(59);
+ console.log(vari);
+ console.log(vari.enqueueStack.concat(vari.dequeueStack));
+
+    </script>
+</body>
+</html>

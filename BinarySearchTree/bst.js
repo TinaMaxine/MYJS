@@ -55,6 +55,14 @@ const bst= function (){
             }
 
         }
+        this.postorder = (node=root)=>{
+            if(node!=null){
+                console.log(node.value);
+                this.preorder(node.left);
+                this.preorder(node.right);
+            }
+
+        }
 
 
 }
