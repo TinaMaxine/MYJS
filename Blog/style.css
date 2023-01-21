@@ -1,0 +1,71 @@
+html,body,.body{
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+.header{
+    height: 10%;
+   background-color: lightblue;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   padding: 5px;
+   font-weight: 600;
+   cursor: pointer;
+}
+
+.header-auth{
+    width: 10%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+
+
+
+
+.content{
+    height: 90%;
+    background-color: lightgrey;
+    padding: 5px;
+    position: relative;
+}
+
+.blog{
+    width: 40%;
+    height: 30%;
+    padding: 3px;
+
+}
+.blog>div{
+    margin: 5px;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color:lightslategray;
+    display: none;
+}
+
+.form >input{
+    margin-bottom: 3px;
+    width: 25%;
+    height: 15%;
+    
+
+}
