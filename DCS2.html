@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DCS2</title>
+</head>
+<body>
+    <!-- <input type="text" class="box1">
+    <input type="text" class="box2">
+    <button type="button" onclick="mySum()">Click</button>
+    <script>
+        var x=document.getElementsByClassName("box1").value
+        console.log(x);
+        // var x=Number(document.querySelector(".box1").value);
+        // console.log(x,typeof(x));
+        // var y=Number(document.querySelector(".box2").value);
+        function mySum(x,y){
+            return x+y
+        } -->
+        <input type="text" id="box1">
+        <input type="text" id="box2">
+        <button onclick="myResult(myFunc());">On click</button>
+        <h1 id="result"></h1>
+        
+        <script>
+            function myFunc(){
+                var x=document.getElementById("box1").value;
+                var y=document.getElementById("box2").value;
+                var z=Number(x)+Number(y);
+
+                // alert(z);
+                return z
+            }
+            function myResult(data){
+            document.getElementById("result").innerHTML=data;
+        }
+        
+        </script>
+
+</body>
+</html>

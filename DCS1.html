@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DCS1</title>
+</head>
+<body>
+    <h1 id="result"></h1>
+    <script>
+
+        function myResult(data){
+            document.getElementById("result").innerHTML=data;
+        }
+        function performCal(x1,y1){
+            sum=x1+y1;
+            return sum;
+        }
+        let myOutput=performCal(2,3);
+        // myResult(myOutput);
+        myResult(performCal(2,3));
+    </script>
+</body>
+</html>

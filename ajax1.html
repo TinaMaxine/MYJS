@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<script>
+    function Posts() {
+        var postId = document.getElementById("postId").value;
+        var xhttp = new XMLHttpRequest();
+        var url = "https://jsonplaceholder.typicode.com/todos/" + postId;
+
+xhttp.open("GET", url, true);
+xhttp.send();
+
+xhttp.onreadystatechange = function () {
+  if (xhttp.readyState !== 4){
+    console.log(" Current State : ", xhttp.readyState);
+  } 
+  if (xhttp.readyState === 4 && xhttp.status === 200) {
+    console.log("Response :- ", xhttp.response);
+    document.getElementById("posts").innerHTML = xhttp.response;
+  }
+};
+}
+</script>
+</head>
+<body>
+    <input type="text" name="postId" id="postId" />
+  <button onclick="Posts()">Posts</button>
+  <div id="posts"></div>
+</body>
+</html>
