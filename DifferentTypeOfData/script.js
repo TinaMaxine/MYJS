@@ -23,3 +23,24 @@ function print2(){
     .catch(err => {console.log(err)
         document.getElementById("output").innerHTML=err})
 }
+
+document.getElementById("three").addEventListener("click",print3);
+function print3(){
+    fetch ("https://api.github.com/users")
+    .then(res => res.json())
+    .then(data => {console.log(data)
+    
+    let output='';
+    data.forEach(function(post) {
+        output+=`<li>${post.login}:${post.id}`;
+        document.getElementById("output").innerHTML=output;
+        
+    });
+})
+    .catch(err => {console.log(err)
+        document.getElementById("output").innerHTML=err})
+}
+axios
+  .get("https://jsonplaceholder.typicode.com/todos")
+  .then((response) => console.log(response.data))
+  .catch((error) => console.error(error));
