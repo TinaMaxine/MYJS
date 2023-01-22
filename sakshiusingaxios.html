@@ -1,0 +1,22 @@
+<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.0/axios.min.js%22 integrity="sha512-DZqqY3PiOvTP9HkjIWgjO6ouCbq+dxqWoJZ/Q+zPYNHmlnI2dQnbJ5bxAHpAMw+LXRm4D72EIRXzvcHQtE8/VQ==" crossorigin="anonymous"></script> 
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.0/axios.min.js" integrity="sha512-DZqqY3PiOvTP9HkjIWgjO6ouCbq+dxqWoJZ/Q+zPYNHmlnI2dQnbJ5bxAHpAMw+LXRm4D72EIRXzvcHQtE8/VQ==" crossorigin="anonymous"></script>
+
+    <script>
+ // const axios = require("axios").default;
+   axios.get("https://jsonplaceholder.typicode.com/todos%22")
+  .then((response) => console.log(response.data))
+  .catch((error) => console.error(error));
+
+const get = async () => {
+    try {
+        const resp =  await axios.get('http://jsonplaceholder.typicode.com/posts');
+        console.log(resp.data);
+    } catch (err) {
+        // Handle Error Here
+        console.error(err);
+    }
+};
+
+get();
+  </script>
