@@ -1,11 +1,11 @@
-const url="https://api.github.com/users/";
+const url='https://api.github.com/users/';
 const form=document.getElementById("form");
 const main= document.getElementById("main");
 const search=document.getElementById("search");
 
 async function getUser(userName){
     try{
-        const data=await axios(url+userName)
+        const {data}=await axios(url+userName)
         userCard(data);
         getRepos(userName);
     }
@@ -16,15 +16,15 @@ async function getUser(userName){
 }
 async function getRepos(userName){
     try{
-        const repos=await axios(url+userName+'/repos?sort=created')
-        repo(repos);
+        const {data}=await axios(url+userName+'/repos?sort=created')
+        reposToCard(data);
     }
     catch(err){
         console.error(err);
 
     }
 }
-function userCard(data){
+function userCard(user){
     const userID = user.name || user.login
     const userBio = user.bio ? `<p>${user.bio}</p>` : ''
     const cardHTML = `
@@ -48,9 +48,9 @@ function userCard(data){
     main.innerHTML = cardHTML
     
 }
-function repo(r){
-    const a= document.getElementById("repos");
-    r.splice(0,7);
+function reposToCard(r){
+    const fines= document.getElementById("repos");
+    r.slice(0,5);
     r.forEach(repo => {
         const repoEl = document.createElement('a')
         repoEl.classList.add('repo')
@@ -58,7 +58,7 @@ function repo(r){
         repoEl.target = '_blank'
         repoEl.innerText = repo.name
 
-        reposEl.appendChild(repoEl)
+        fines.appendChild(repoEl)
     })
     form.addEventListener("submit",(e)=>{
         e.preventDefault();
