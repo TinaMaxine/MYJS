@@ -1,48 +1,131 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
     <style>
-        body{
-            background-color: grey;
+        *{
+            margin:0;
+            padding: 0%;
         }
-        #firstnav{
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex: 2 2 3;
-        }
-        #secondnav{
-            background-color: rgb(86, 74, 74);
-            color: white;
-        }
-        a{
-            text-decoration: none;
-            color: white;
-        }
+
+      body {
+        background-color: grey;
+      }
+      #firstnav {
+        padding: 5px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex: 1 1 auto;
+        background-color: #131921;
+        color: white;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      #secondnav {
+        background-color: #232f3e;
+        color: white;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        font-family: Arial, Helvetica, sans-serif;
+        /* flex: 1 1 0;
+             */
+      }
+      #firstnav a{
+        text-decoration: none;
+        color: white;
+      }
+      #secondnav div{
+        margin-left: 20px;
+        margin: 10px;;
+      }
+      #secondnav a {
+        text-decoration: none;
+        color: white;
+      }
+     #signIn {
+        text-decoration: none;
+        color: black;
+        background-color: rgb(227, 153, 15);
+        padding: 5px;
+        border-radius: 35px;
+        width: 60px;
+        display: flex;
+        justify-content: center;
+      }
+      #firstnav input {
+        width: 650px;
+        height: 28px;
+        border-radius: 5px;
+      }
+      #id {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+      }
+      .icon,.deliverToIndia :nth-child(2){
+        display: flex;
+        justify-content: center;
+      }
+      #icon2{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+      }
+      .searchbox{
+        display: flex;
+        /* border: 4px solid white; */
+        justify-content: center;
+        align-items: center;
+      }
     </style>
-
-</head>
-<body>
-    <nav id="firstnav" >
-        <img src="./amazon-logo-1024x683.png" alt="" width="50px">
-        <i class="fa fa-map-marker" aria-hidden="true">Deliver in India</i>
-        <div id="search" style="background-color: aliceblue;">Search your product</div>
-        <a href="">Sign in</a>
-        <span>Returns & Orders</span>
-        <i class="fa fa-shopping-cart" style="font-size:24px"></i>
-
+  </head>
+  <body>
+    <nav id="firstnav">
+        <a href="https://www.amazon.in/?&ext_vrnc=hi&tag=googhydrabk1-21&ref=pd_sl_3bysgj3dbc_e&adgrpid=59248868592&hvpone=&hvptwo=&hvadid=486399289420&hvpos=&hvnetw=g&hvrand=8627087004008315900&hvqmt=e&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=1007741&hvtargid=kwd-317924426332&hydadcr=5622_2175700&gclid=CjwKCAiAoL6eBhA3EiwAXDom5j_LB56hZtL9FrQpa3KP3Y2OTQSFhp92oGgiscvleg73nonMZitvDhoCNi8QAvD_BwE"><img src="./1622736066_amazon-logo_story.jpg" alt="" width="80px" /></a>
+      <a href="#">
+        <div id="iconAndDelivery">
+        <div class="icon">
+          <i class="fa fa-map-marker" aria-hidden="true"></i>
+        </div>
+        <div class="deliverToIndia">
+          <div>Deliver to </div>
+          <div> India</div>
+        </div>
+      </div>
+    </a>
+    <div class="searchbox">
+        <div class="searchElement1">All
+            <i class="fa fa-caret-down" style="font-size:18px"></i>
+        </div>
+        <div class="searchElement2"><input type="text" name="SearchProduct" placeholder="Search Amazon.in" /></div>
+        <div class="searchElement3"><i class="fa fa-search" aria-hidden="true" style="font-size: 24px;"></i></div>
+      
+    </div>
+      <a href="#" id="signIn">Sign in</a>
+      <span>Returns & Orders</span>
+      <i class="fa fa-shopping-cart" style="font-size: 22px"></i>
     </nav>
     <nav id="secondnav">
-        <a href="">All</a>
-        <a href="">Today's deals</a>
-        <a href="">Customer Service</a>
-        <a href="">Registry</a>
-        <a href="">Gift Cards</a>
+      <div id="icon2"> <i class="fa fa-bars" aria-hidden="true"> </i>&nbsp;<a href="">All</a></div>  
+      <div> <a href="">Amazon miniTV</a></div> 
+      <div> <a href="">Best Sellers</a></div> 
+      <div> <a href="">Mobiles</a></div> 
+      <div> <a href="">Today's deals</a></div> 
+      <div> <a href="">Electronics</a></div> 
+      <div> <a href="">Prime</a></div> 
+      <div> <a href="">Fashion</a></div> 
+      <div> <a href="">Amazon Pay</a></div> 
+      <div> <a href="">Home & Kitchen</a></div> 
     </nav>
-</body>
+
+  </body>
 </html>
