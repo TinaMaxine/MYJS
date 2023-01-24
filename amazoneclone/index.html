@@ -10,10 +10,10 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
     <style>
-        *{
-            margin:0;
-            padding: 0%;
-        }
+      * {
+        margin: 0;
+        padding: 0%;
+      }
 
       body {
         background-color: grey;
@@ -38,19 +38,19 @@
         /* flex: 1 1 0;
              */
       }
-      #firstnav a{
+      #firstnav a {
         text-decoration: none;
         color: white;
       }
-      #secondnav div{
+      #secondnav div {
         margin-left: 20px;
-        margin: 10px;;
+        margin: 10px;
       }
       #secondnav a {
         text-decoration: none;
         color: white;
       }
-     #signIn {
+      #signIn {
         text-decoration: none;
         color: black;
         background-color: rgb(227, 153, 15);
@@ -70,71 +70,84 @@
         justify-content: flex-end;
         align-items: center;
       }
-      .icon,.deliverToIndia :nth-child(2){
+      .icon,
+      .deliverToIndia :nth-child(2) {
         display: flex;
         justify-content: center;
       }
-      #icon2{
+      #icon2 {
         display: flex;
         justify-content: center;
         align-items: center;
-        
       }
-      .searchbox{
+      .searchbox {
         display: flex;
         /* border: 4px solid white; */
         justify-content: center;
         align-items: center;
       }
-      .searchElement1{
+      .searchElement1 {
         background-color: white;
         color: #232f3e;
+      }
+      .searchElement2 {
       }
     </style>
   </head>
   <body>
     <nav id="firstnav">
-        <a href="https://www.amazon.in/?&ext_vrnc=hi&tag=googhydrabk1-21&ref=pd_sl_3bysgj3dbc_e&adgrpid=59248868592&hvpone=&hvptwo=&hvadid=486399289420&hvpos=&hvnetw=g&hvrand=8627087004008315900&hvqmt=e&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=1007741&hvtargid=kwd-317924426332&hydadcr=5622_2175700&gclid=CjwKCAiAoL6eBhA3EiwAXDom5j_LB56hZtL9FrQpa3KP3Y2OTQSFhp92oGgiscvleg73nonMZitvDhoCNi8QAvD_BwE"><img src="./1622736066_amazon-logo_story.jpg" alt="" width="80px" /></a>
+      <a
+        href="https://www.amazon.in/?&ext_vrnc=hi&tag=googhydrabk1-21&ref=pd_sl_3bysgj3dbc_e&adgrpid=59248868592&hvpone=&hvptwo=&hvadid=486399289420&hvpos=&hvnetw=g&hvrand=8627087004008315900&hvqmt=e&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=1007741&hvtargid=kwd-317924426332&hydadcr=5622_2175700&gclid=CjwKCAiAoL6eBhA3EiwAXDom5j_LB56hZtL9FrQpa3KP3Y2OTQSFhp92oGgiscvleg73nonMZitvDhoCNi8QAvD_BwE"
+        ><img src="./1622736066_amazon-logo_story.jpg" alt="" width="80px"
+      /></a>
       <a href="#">
         <div id="iconAndDelivery">
-        <div class="icon">
-          <i class="fa fa-map-marker" aria-hidden="true"></i>
+          <div class="icon">
+            <i class="fa fa-map-marker" aria-hidden="true"></i>
+          </div>
+          <div class="deliverToIndia">
+            <div>Deliver to</div>
+            <div>India</div>
+          </div>
         </div>
-        <div class="deliverToIndia">
-          <div>Deliver to </div>
-          <div> India</div>
-        </div>
-      </div>
-    </a>
-    <div class="searchbox">
+      </a>
+      <div class="searchbox">
         <div class="searchElement1">
-            <span >All</span> 
-            <i class="fa fa-caret-down" style="font-size:18px"></i>
+            <button type="button" class="" data-toggle="dropdown"><span>All</span></button>
+            <ul class="dropdown-menu scrollable-dropdown" role="menu">
+                <li>A</li>
+                <li>A</li>
+                <li>A</li>
+                <li>A</li>
+                <li>A</li>
+            </ul>
+          
+          <!-- <i class="fa fa-caret-down" style="font-size: 18px"></i> -->
         </div>
-        <div class="searchElement2"><input type="text" name="SearchProduct" placeholder="Search Amazon.in" /></div>
-        <div class="searchElement3"><i class="fa fa-search" aria-hidden="true" style="font-size: 24px;"></i></div>
-      
-    </div>
+<input type="hidden" name="search_param" value="all" id="search_param">
+          <input type="text" class="form-control" name="X" id="search" placeholder="Search Amazon.in"/>
+        <button class="btn btn-default" type="button">.
+            <span class="glyphicon glyphicon-search"></span>
+        </button>
       <a href="#" id="signIn">Sign in</a>
       <span>Returns & Orders</span>
       <i class="fa fa-shopping-cart" style="font-size: 22px"></i>
     </nav>
     <nav id="secondnav">
-      <div id="icon2"> 
+      <div id="icon2">
         <i class="fa fa-bars" aria-hidden="true"> </i>
         &nbsp;
         <a href="">All</a>
-    </div>  
-      <div> <a href="">Amazon miniTV</a></div> 
-      <div> <a href="">Best Sellers</a></div> 
-      <div> <a href="">Mobiles</a></div> 
-      <div> <a href="">Today's deals</a></div> 
-      <div> <a href="">Electronics</a></div> 
-      <div> <a href="">Prime</a></div> 
-      <div> <a href="">Fashion</a></div> 
-      <div> <a href="">Amazon Pay</a></div> 
-      <div> <a href="">Home & Kitchen</a></div> 
+      </div>
+      <div><a href="">Amazon miniTV</a></div>
+      <div><a href="">Best Sellers</a></div>
+      <div><a href="">Mobiles</a></div>
+      <div><a href="">Today's deals</a></div>
+      <div><a href="">Electronics</a></div>
+      <div><a href="">Prime</a></div>
+      <div><a href="">Fashion</a></div>
+      <div><a href="">Amazon Pay</a></div>
+      <div><a href="">Home & Kitchen</a></div>
     </nav>
-
   </body>
 </html>
