@@ -23,7 +23,7 @@
         display: flex;
         justify-content: space-around;
         align-items: center;
-        flex: 1 1 auto;
+        /* flex: 1 1 auto; */
         background-color: #131921;
         color: white;
         font-family: Arial, Helvetica, sans-serif;
@@ -53,7 +53,7 @@
       #signIn {
         text-decoration: none;
         color: black;
-        background-color: rgb(227, 153, 15);
+            background: #FEBD69;
         padding: 5px;
         border-radius: 35px;
         width: 60px;
@@ -80,18 +80,64 @@
         justify-content: center;
         align-items: center;
       }
-      .searchbox {
-        display: flex;
-        /* border: 4px solid white; */
-        justify-content: center;
-        align-items: center;
-      }
-      .searchElement1 {
-        background-color: white;
-        color: #232f3e;
-      }
-      .searchElement2 {
-      }
+      .search-box input {
+            border: 2px solid #cdcdcd;
+            border-right: 0;
+            border-left: 0;
+
+        }
+        
+        .padding10{
+            padding-top: 5px;
+            padding-bottom: 5px;
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+        button,
+        input,
+        optgroup,
+        select,
+        textarea {
+            border: 2px solid #cdcdcd;
+            margin: 0;
+            border-right: .5px solid #cdcdcd;
+        }
+        .search-box {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .search-box i {
+            /* border: 2px solid #cdcdcd; */
+            height: 16px;
+            width: 40px;
+            padding: 8px;
+            border-left: 0;
+            background: #FEBD69;
+            /* padding-right: 5px; */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+        }
+
+        .search-box select {
+            background: #F3F3F3;
+        }
+        select{
+            width: 55px; 
+            height: 32px; 
+        }
+        #stupida{
+            height: 32px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+        }
+
     </style>
   </head>
   <body>
@@ -111,17 +157,58 @@
           </div>
         </div>
       </a>
-      <div class="searchbox">
-        <div class="searchElement1">
-            <button type="button" class="" data-toggle="dropdown"><span>All</span></button>
-          
-          <!-- <i class="fa fa-caret-down" style="font-size: 18px"></i> -->
-        </div>
-<input type="hidden" name="search_param" value="all" id="search_param">
-          <input type="text" class="form-control" name="X" id="search" placeholder="Search Amazon.in"/>
-        <button class="btn btn-default" type="button">.
-            <span class="glyphicon glyphicon-search" ></span>
-        </button>
+      <div class="search-box">
+        <select>
+            <option selected="selected" ><button>All</button> </option>
+                <option >Alexa Skills</option>
+                <option >Amazon Devices</option>
+                <option >Amazon Fashion</option>
+                <option >Amazon Pharmacy</option>
+                <option >Appliances</option>
+                <option >Apps &amp; Games</option>
+                <option >Baby</option>
+                <option >Beauty</option>
+                <option >Books</option>
+                <option >Car &amp; Motorbike</option>
+            <option>Clothing &amp; Accessories</option>
+            <option>Collectibles</option>
+            <option>Computers &amp; Accessories</option>
+            <option>Deals</option>
+            <option>Electronics</option>
+            <option>Furniture</option>
+            <option>Garden &amp; Outdoors</option>
+            <option>Gift Cards</option>
+            <option>Grocery &amp; Gourmet Foods</option>
+            <option>Health &amp; Personal Care</option>
+            <option>Home &amp; Kitchen</option>
+            <option>Industrial &amp; Scientific</option>
+            <option>Jewellery</option>
+            <option>Kindle Store</option>
+            <option>Luggage &amp; Bags</option>
+            <option>Luxury Beauty</option>
+            <option>Movies &amp; TV Shows</option>
+            <option>Music</option>
+            <option>Musical Instruments</option>
+            <option>Office Products</option>
+            <option>Pet Supplies</option>
+            <option>Prime Video</option>
+            <option>Same-Day Delivery</option>
+            <option>Shoes &amp; Handbags</option>
+            <option>Software</option>
+            <option>Sports, Fitness &amp; Outdoors</option>
+            <option>Subscribe &amp; Save</option>
+            <option>Tools &amp; Home Improvement</option>
+            <option>Toys &amp; Games</option>
+            <option>Under ₹500</option>
+            <option>Video Games</option>
+            <option>Watches</option>
+        </select>
+        <input placeholder="Search Amazon.in" type="text">
+        <a href="#" id="stupida">
+            <i class="fa fa-search"></i>
+
+        </a>
+    </div>
       <a href="#" id="signIn">Sign in</a>
       <span>Returns & Orders</span>
       <i class="fa fa-shopping-cart" style="font-size: 22px"></i>
