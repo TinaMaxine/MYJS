@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function food(color,season){
+            return {color,season,greet(){console.log("Hello");}}
+        }
+        var a=food("yellow","summer");
+        console.log(a.color);
+        console.log(a.season);
+        a.greet();
+        console.log(a);
+    </script>
+</body>
+</html>
