@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Person{
+    constructor(name, age, collegeName){
+        this.name = name;
+        this.age  = age;
+        this.collegeName = collegeName;
+    }
+    
+    displayName(){
+        return `${this.name}`;
+    }
+    
+    displayAge(){
+        return `${this.age}`;
+    }
+    
+    displayCollageName(){
+        return `${this.collegeName}`;
+    }
+    
+    
+}
+
+class student extends Person{
+    constructor(name,age,collegeName,id,branch){
+        super(name,age,collegeName);
+        this.branch=branch;
+        this.id=id;
+    }
+    displaybranch(){
+        // console.log(`${this.branch}`)
+        return this.branch
+    }
+}
+
+
+class professor extends Person{
+    constructor(name,age,collegeName,email,dept){
+        super(name,age,collegeName);
+        this.email=email;
+        this.dept=dept;
+    }
+    displaydept(){
+        return this.dept;
+    }
+}
+
+let s1=new student("shakul",40,"du",101,"it")
+let p1= new Person("shakul",40,"du")
+let pr=new professor("shakul",40,"du","shakul@w.com","tech")
+console.log(s1.displayName())
+console.log(s1.displaybranch()); 
+console.log(pr.displayName());
+console.log(pr.displaydept());
+    </script>
+</body>
+</html>

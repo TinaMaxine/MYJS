@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    class User {
+    #password;
+    constructor(name, userName, password) {
+      this.name = name;
+      this.userName = userName;
+      this.#password = password;
+    }
+  
+    login(userName, password) {
+      if (userName === this.userName && password === this.#password) {
+        console.log('Login Successfully');
+      } else {
+        console.log('Authentication Failed!!');
+      }
+    }
+  
+    setPassword(newPassword) {
+      this.#password = newPassword;
+    }
+    getPassword(){
+      return this.#password;
+    }
+  };
+  
+  const p1 = new User("shakul", "shakul",'password:)');
+  const js = new User('JavaScript', 'js', 'python:)');
+  
+  
+  p1.login("shak" ,'password:)'); 
+  js.login('javas', 'python:)'); 
+  
+  console.log(p1.name); 
+  console.log(p1.password); 
+  //console.logp1.#password); 
+  console.log(p1.getPassword());
+  
+  
+  </script>
+</body>
+</html>
