@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        class Stack{
+            constructor(){
+                this.queue1=[];
+                this.queue2=[];
+            }
+            Spush(x){
+                this.queue2.push(x);
+                while(this.queue1.length!=0){
+                    this.queue2.push(this.queue1[0])
+                    this.queue1.shift();
+                }
+                this.q=this.queue1
+                this.queue1=this.queue2;
+                this.queue2=this.q
+            }
+            Spop(){
+                this.queue1.shift()
+
+            }}
+                    var obj2=new Stack()
+                    obj2.Spush(29);
+                    obj2.Spush(69);
+                    obj2.Spush(34);
+                    obj2.Spush(791)
+                    console.log(obj2);
+                    obj2.Spop();
+    </script>
+</body>
+</html>

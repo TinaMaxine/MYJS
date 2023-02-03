@@ -1,3 +1,6 @@
+<!-- time complexity is O(N)
+space complexity is O(2N) -->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,15 +13,15 @@
     <script>
         class Queue{
             constructor(){
-                this.stack1=[];
+                this.stack1=[];//space complexity 2N
                 this.stack2=[];
             }
             Qpush(x){
-                while(this.stack1.length>0){
+                while(this.stack1.length>0){ //n
                     this.stack2.push(this.stack1.pop());
                 }
                 this.stack1.push(x);
-                while(this.stack2.length>0){
+                while(this.stack2.length>0){//m
                     this.stack1.push(this.stack2.pop());
                 }
             }
