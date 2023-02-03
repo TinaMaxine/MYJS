@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Queue{
+            constructor(){
+                this.stack1=[];
+                this.stack2=[];
+            }
+            Qpush(x){
+                while(this.stack1.length>0){
+                    this.stack2.push(this.stack1.pop());
+                }
+                this.stack1.push(x);
+                while(this.stack2.length>0){
+                    this.stack1.push(this.stack2.pop());
+                }
+            }
+            Qpop(){
+                this.stack1.pop();
+            }
+        }
+        var q=new Queue();
+
+        q.Qpush(5);
+        q.Qpush(10);
+        q.Qpush(15);
+        q.Qpop();
+        console.log(q);
+    </script>
+</body>
+</html>
