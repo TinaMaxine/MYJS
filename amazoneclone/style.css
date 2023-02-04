@@ -5,7 +5,7 @@
       }
 
       body {
-        background-color: grey;
+        background-color: rgb(204, 201, 201);
       }
       #firstnav {
         padding: 5px;
@@ -147,7 +147,18 @@
 /* Hide the images by default */
 .mySlides {
   display: none;
+  /* position: relative;     */
 }
+
+/* .img-fade {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 50%;
+    background: inherit;
+    background-image: linear-gradient(to bottom, transparent 0%, black 100%);
+  } */
 
 /* Next & previous buttons */
 .prev, .next {
@@ -215,24 +226,142 @@
 .fade {
   animation-name: fade;
   animation-duration: 1.5s;
+  
 }
 
 @keyframes fade {
   from {opacity: .4}
   to {opacity: 1}
 }
-.product-cards{
-    display: flex;
-    align-items: stretch;
-    flex: 1 2 1;
-    justify-content:space-around;
-    /* z-index: -1; */
-    /* overflow: hidden; */
+ 
+.training-section{
+    /* width: 100%; */
+    background:transparent;
     position: relative;
-    top:200px;
-    /* width: 200px;
-    height: 200px; */
+    top:150px;
+    z-index: 9;
+    display: flex;
+    margin: 10px;
+    justify-content: space-around;
+    align-items: center;
+    
 }
-.div1{
-    background-color: aqua;
+.t1,.t2,.t3{
+    background-color: #ffff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+}
+.t1 h1,.t2 h1,.t3 h1{
+    font-size: 20px;
+}
+.othercards{
+    /* background-color: #be3636;
+    position:relative;
+    top: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center; */
+    background:transparent;
+    position: relative;
+    top:150px;
+    z-index: 9;
+    display: flex;
+    margin: 10px;
+    justify-content: space-around;
+    align-items: center;
+}
+.o1,.o2,.o3{
+    background-color: #ffff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+}
+.o1 h1,.o2 h1,.o3 h1{
+    font-size: 20px;
+}
+.women{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    /* flex:2 1 2; */
+    flex-wrap: wrap;
+    position: relative;
+    height:250px;
+    width: 400px;
+}
+.item{
+    /* width: 100%; */
+    /* top: 10px; */
+    width: 100px;
+}
+.women > img{
+    /* margin: 15px; */
+    flex:50%;
+    box-shadow: 0 0 0 10px rgb(255, 255, 255);
+  /* margin-bottom: 10px; */
+}
+.bottom{
+    position: relative;
+    top: 150px;
+    background-color: #ffffff;
+    margin: 0 40px;
+
+}
+.bottom>h1{
+    font-size: 20px;
+}
+.f1images{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.footer{
+    background-color: white;
+    position: relative;
+    top:180px;
+    width: auto;
+    height:200px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.footer span>button{
+    background:linear-gradient(to bottom,#f1cca6 0% ,#f6a843 100%);
+    color: black;
+    width: 250px;
+    height:30px;
+    border: 1px solid #fc9003;
+    border-radius: 2px;
+}
+.footer span>a{
+    text-decoration: none;
+}
+.unn{
+    background-color: #37475a;
+    color: white;
+    width: auto;
+    height:50px;
+    position: relative;
+    top:150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.links{
+    background-color: #232f3e;
+    position: relative;
+    top: 150px;
+    color: white;
+    font-size: 20px;
+}
+.links div a{
+    text-decoration: none;
+    color: white;
 }
