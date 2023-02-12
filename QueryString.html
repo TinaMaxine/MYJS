@@ -19,7 +19,7 @@ check for-each function -->
     <script>
         var array=["abcde",'sdaklfj','asdjf','na','basdn','sdaklfj','asdjf','na','asdjf','na','basdn','sdaklfj','asdjf'];
         var query=["abcde",'sdaklfj','asdjf','na','basdn'];
-       document.write( Query(array,query));
+       document.write(JSON.stringify(Query(array,query)));//to make it apppear as string
         function search(array,sea){
             var count=0;
             for(i=0;i<array.length;i++)
