@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function f1() {
+  if(document.all) { return false; }
+}
+function f2(e) {
+  if(document.layers || (document.getElementById &! document.all)) {
+    if(e.which==2 || e.which==3) { return false; }
+  }
+}
+if(document.layers) {
+  document.captureEvents(Event.MOUSEDOWN);
+  document.onmousedown = f1;
+}
+else {
+  document.onmouseup = f2;
+  document.oncontextmenu = f1;
+}
+document.oncontextmenu = new function("return false");
+    </script>
+</body>
+</html>

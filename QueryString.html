@@ -1,0 +1,42 @@
+<!-- !Search the query-String in given String-Array
+and return the number of each query-String
+
+Sample input -   Stirngs[13] = ['abcde','sdaklfj','asdjf','na','basdn','sdaklfj','asdjf','na','asdjf','na','basdn','sdaklfj','asdjf'];
+                  Queries[5] = ['abcde','sdaklfj','asdjf','na','basdn'];
+Sample output -  [1,3,4,3,2]
+
+check for-each function -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var array=["abcde",'sdaklfj','asdjf','na','basdn','sdaklfj','asdjf','na','asdjf','na','basdn','sdaklfj','asdjf'];
+        var query=["abcde",'sdaklfj','asdjf','na','basdn'];
+       document.write( Query(array,query));
+        function search(array,sea){
+            var count=0;
+            for(i=0;i<array.length;i++)
+                if(sea===(array[i]))
+                    count++;
+            return count;
+        }
+        function Query(array,query){
+            output=[];
+            
+            for(j=0;j<query.length;j++){
+            // document.write(search(array,query[j])+" ");
+            output[j]=search(array,query[j]); 
+        }
+        return output;
+        }
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
+</head>
+<body>
+    <h1>disable right click?</h1>
+    <!-- <div oncontextmenu="return false">oh no!</div> -->
+
+    <input type="button" value="donnn" onmousedown="">
+    <script>
+        //using event listener
+        // document.addEventListener("contextmenu",(event)=>{
+        //     event.preventDefault();
+        // })
+        //jquery
+        // $(document).ready(function(){
+        //     $(document).bind("contextmenu",function(e){
+        //         return false;
+        //     });
+        // });
+        document.captureEvents(Event.MOUSEDOWN)
+
+
+
+    </script>
+    <!-- <div oncontextmenu="return false;">Right click is disabled??</div> -->
+    <!-- mousedown -->
+    <!-- document.captureEvents(Event.MOUSEDOWN) -->
+</body>
+</html>
