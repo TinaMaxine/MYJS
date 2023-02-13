@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing: border-box;
+            background-image: linear-gradient(to right,#2193b0 , #6dd5ed);
+        }
+        .main{
+            /* border: 2px solid; */
+            padding: 50px 0;
+            margin: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: none;
+
+        }
+        .paragraph{
+            /* border: 5px solid; */
+            /* padding: 50px 0; */
+            margin: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color:rgb(58, 41, 41);
+
+        }
+        #in{
+            color:rgb(58, 41, 41);
+            font-size: 20px;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            background:none;
+            background-color: aliceblue;
+        }
+        #bt{
+            margin-left: 10px;
+            padding: 0 5px 0 5px;
+            color:rgb(58, 41, 41);
+            font-size: larger;
+            border-radius: 15%;
+            border: none;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="main">
+    <input type="text" id="in" placeholder="Enter the country name">
+    <button type="button" id="bt" onclick="myFunc()">+</button>
+    </div>
+    <div class="paragraph">
+    <p id="para"></p>
+    </div>
+    <script>
+        const in1=document.getElementById('in');
+        const bt1=document.getElementById('bt');
+        const pp1=document.getElementById('para')
+        function myFunc(){
+            getPopulation(in1.value);
+            
+            // console.log(pp1.innerHTML);
+        }
+        function getPopulation(countryName) {
+    const xhr = new XMLHttpRequest();
+    xhr.open('GET', `https://restcountries.com/v2/name/${countryName}?fullText=true`, true);
+    xhr.onreadystatechange = function() {
+        if (xhr.readyState === XMLHttpRequest.DONE){
+            if( xhr.status === 200) {
+            console.log(xhr.responseText);
+            const data = JSON.parse(xhr.responseText);
+            console.log(data[0].population);
+            console.log(data[0].name);
+            getValue(data[0].population,data[0].name);
+            // return `population is ${data[0].population}, ${data[0].name}`;
+            
+        }
+        else if(xhr.status === 404){
+            alert("Country not found!")
+
+        }
+        } 
+    };
+    xhr.send();
+}
+function getValue(x,y){
+
+    pp1.innerHTML=`Population of ${y} is ${x}`
+    pp1.style.background="none";
+}
+
+// getPopulation("United Kingdom of Great Britain and Northern Ireland");
+    </script>
+</body>
+</html>
