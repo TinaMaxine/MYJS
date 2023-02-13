@@ -5,65 +5,36 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <style>
-        *{
-            margin:0;
-            padding:0;
-            box-sizing: border-box;
-            background-image: linear-gradient(to right,#2193b0 , #6dd5ed);
-        }
-        .main{
-            /* border: 2px solid; */
-            padding: 50px 0;
-            margin: 100px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background: none;
-
-        }
-        .paragraph{
-            /* border: 5px solid; */
-            /* padding: 50px 0; */
-            margin: 100px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            color:rgb(58, 41, 41);
-
-        }
-        #in{
-            color:rgb(58, 41, 41);
-            font-size: 20px;
-            font-family: Georgia, 'Times New Roman', Times, serif;
-            background:none;
-            background-color: aliceblue;
-        }
-        #bt{
-            margin-left: 10px;
-            padding: 0 5px 0 5px;
-            color:rgb(58, 41, 41);
-            font-size: larger;
-            border-radius: 15%;
-            border: none;
-            font-family: Georgia, 'Times New Roman', Times, serif;
-        }
-        
-    </style>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="./style2.css">
 </head>
 <body>
     <div class="main">
     <input type="text" id="in" placeholder="Enter the country name">
-    <button type="button" id="bt" onclick="myFunc()">+</button>
+    <button type="button" id="bt" onclick="myFunc()">
+        <i class="fa fa-search" id="icon" aria-hidden="true"></i>
+    </button>
     </div>
     <div class="paragraph">
     <p id="para"></p>
     </div>
     <script>
         const in1=document.getElementById('in');
+        //adding enter functionality
+        in1.addEventListener('keyup',(e)=>{
+            if(e.keyCode===13){
+                pp1.innerHTML="";
+                    myFunc();
+            }
+        }
+        )
         const bt1=document.getElementById('bt');
         const pp1=document.getElementById('para')
         function myFunc(){
+            pp1.innerHTML="";
             getPopulation(in1.value);
             
             // console.log(pp1.innerHTML);
@@ -84,6 +55,7 @@
         }
         else if(xhr.status === 404){
             alert("Country not found!")
+            // pp1.innerHTML="";
 
         }
         } 
@@ -94,6 +66,7 @@ function getValue(x,y){
 
     pp1.innerHTML=`Population of ${y} is ${x}`
     pp1.style.background="none";
+    pp1.style.fontFamily="Franklin Gothic Medium"
 }
 
 // getPopulation("United Kingdom of Great Britain and Northern Ireland");
