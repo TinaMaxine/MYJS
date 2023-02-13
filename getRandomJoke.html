@@ -7,9 +7,31 @@
     <title>Document</title>
 </head>
 <body>
+    <!-- <button type="button" onclick="loadJoke()">Click</button> -->
+    <h1>Jokes you can't understand</h1>
+    <p id="hhh"></p>
     <script>
         // write a JavaScript program to display random quotes on the webpage whenever the page is reloaded
         // write a JavaScript program to browse to the previous and next page in the website
+        var jokes={
+            "1":"what did policeman say to his belly button? You are under a vest",
+            "2":"knock knock who's there? it's ray! who ray? Hurray!!",
+            "3":"knock knock who's there? To ! To who? no, to whom!!",
+            "4":"What do you call a fake noodle? An impasta.",
+            "5":"what's the best about switzerland? I don't know. But the flag is a big plus.",
+            "6":"Did you hear about the mathematician who's afraid of negative numbers? He will stop at nothing to avoid them.",
+            "7":"Why is peter pan always flying? Cause he neverlands",
+            "8":"What did one toilet say to the other? You look a bit flushed.",
+            "9":"What do sea monsters eat? Fish and chips",
+            "10":"How do you make an octopus laugh? With ten-tickles"
+        }
+        var htap=document.getElementById("hhh");
+        window.onload= function loadJoke(){
+            var raJo=(Math.floor(Math.random()*10))+1;
+            console.log(raJo);
+            htap.innerHTML=jokes[raJo];
+            // document.write(jokes.raJo);
+        }
         
     </script>
 </body>

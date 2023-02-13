@@ -1,0 +1,71 @@
+<!-- EXERCISE 1: (10 MARKS)
+Task 1 :-Create an empty webpage to show restaurant data read through using an XML file.
+Skill Mapping :HTML and CSS
+Task 2 : Create an XML file in your project folder with the following format:-
+< restaurant name="yellow chilli" address="new delhi" lat="47.608940" lng="-122.340141" type="sitdown"/>
+Use AJAX to load the file into your page.
+Task 3 :Create a <ul>. For each <restaurant>, create a <li> with the name and address of the restaurant. Change the color of the text depending on the type of the restaurant (“sit down” or “bar”).
+Skill Mapping : AJAX , XML file. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Reading data from xml files</h1>
+    <ul id="restaurants"></ul>
+    <div id="output"></div>
+<script>
+        document.addEventListener("DOMContentLoaded",()=>{
+            let url="res.xml";
+            fetch(url)
+            .then(response=> response.text())
+            .then(data=>{
+                // console.log(data);
+                let parser=new DOMParser();
+                let xml=parser.parseFromString(data,"application/xml");
+                // document.getElementById('output').textContent=data;
+                // console.log(xml);
+                resList(xml);
+            })
+        })
+        function resList(x){
+            let list=document.getElementById('restaurants');
+            // console.log(list);
+            let restaurants=x.getElementsByTagName('restaurant');
+            // console.log(restaurants);
+            for(let i=0;i<restaurants.length;i++){
+                // console.log(restaurants[i]);
+                let li=document.createElement('li');
+                // let restaurantName=restaurants[i].firstChild.nodeValue;
+                let name=restaurants[i].getAttribute("name");
+                let address=restaurants[i].getAttribute("address");
+                let rtype=restaurants[i].getAttribute("type");
+                li.textContent=`${name} - ${address} - ${rtype}`;
+                // console.log(typeof(rtype));
+
+                if(rtype=="bar"){
+                    // console.log(li);
+                    li.style.color="red"
+                }
+                else{
+                    // console.log(li);
+                    li.style.color="blue"
+                }
+                list.appendChild(li);
+                // for(i=0;i<rtype.length;i++){
+                //     if(rtype[i]=="bar"){
+                //         // document.getElementById("li").style.color="red"
+                //         li.style.color="red"
+                //     }
+                // }
+                
+            }
+        }
+</script>
+
+</body>
+</html>
