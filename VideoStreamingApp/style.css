@@ -1,0 +1,114 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: 'Roboto', sans-serif;
+}
+
+
+.navbar{
+    width: 100%;
+    height: 50px;
+    background-color: rgb(73, 63, 84);
+    /* position: fixed; 
+    top: 0; */
+}
+.nav-container{
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    /* background-color: rgb(178, 178, 206); */
+    padding: 0 50px;
+    height: 100%;
+    color:white;
+    font-family: 'Sen', sans-serif;
+}
+.logo-container{
+    flex: 1;
+}
+.logo{
+    font-size: 30px;
+    color:greenyellow
+}
+.menu-container{
+    flex: 6;
+}
+.menu-list{
+    display: flex;
+    list-style: none;
+}
+.menu-list-item{
+    margin-right: 30px;
+}
+.menu-list-item.active{
+    font-weight:bold;
+
+}
+.profile-container{
+    flex: 2;
+    display: flex;
+    align-items: center;
+    /* background-color: cadetblue; */
+    justify-content: flex-end;
+}
+.prof-text-container{
+    margin: 0 20px;
+}
+.prof-picture{
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    object-fit: cover;  /* new thing */
+}
+.toggle{
+    width: 40px;
+    height: 20px;
+    background-color: white;
+    border-radius: 30px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+}
+.toggle-icon{
+    color:goldenrod;
+}
+.toggle-ball{
+    width: 18px;
+    height: 18px;
+    background-color: black;
+    position: absolute;
+    right: 1px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.sidenav{
+    width: 50px;
+    height: 100%;
+    background-color: rgb(73, 63, 84);
+    position: fixed; 
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    padding-top: 60px;
+    align-items: center;
+
+}
+.left-menu-icon{
+    color:white;
+    font-size: 20px;
+    margin-bottom: 40px;
+}
+.main-container{
+    background-color: rgb(0, 0, 0);;
+    /* height:calc(100vh-50px); */
+    color: white;
+}
+.content-container{
+    margin-left: 50px;
+}
+.featured-movies{
+    height: 50vh;
+    background-color:  
+}
