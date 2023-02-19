@@ -29,4 +29,26 @@ ball.addEventListener("click",()=>{
     })
     ball.classList.toggle("active");
 })
-
+// var arrImgURL=[]
+// var random=Math.floor((Math.random()*100)+8);
+// console.log(random);
+// while(arrImgURL.length<=32){
+//    // fetch the JSON data from the API
+//     fetch('https://tinamaxine.github.io/index.json')
+//     .then(response => response.json())
+//     .then(data => {
+//   // loop through the data array to find the object with the matching ID
+//   const id = random; // example ID
+//   const object = data.data.find(obj => obj._id === id);
+//   if (object) {
+//       // get the image URL from the object
+//       const imageUrl = object.imageUrl;
+//       arrImgURL.push(imageUrl)
+//     console.log(imageUrl); // output the URL to the console
+//   } else {
+//       arrImgURL.push(imageUrl)
+//       console.log('Object with ID ' + id + ' not found in data.');
+//   }
+// })
+// .catch(error => console.error(error));
+// }

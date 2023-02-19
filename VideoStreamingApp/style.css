@@ -180,9 +180,10 @@ body{
 .movie-list-item-image{
     width: 315px;
     height: 330px;
-    /* object-fit: cover; */
+    /* object-fit:contain; */
     transition: all 1s ease-in-out;
     border-radius: 20px;
+
 
 }
 .movie-list-item-title{
