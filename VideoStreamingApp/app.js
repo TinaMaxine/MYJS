@@ -117,3 +117,17 @@ function urlChange(){
 videoUrl.src="https://youtu.be/jjudmcSxzpc"
 
 }
+
+var navHover= document.querySelectorAll(".menu-list-item")
+console.log(navHover)
+navHover.forEach(element=>{
+    element.addEventListener("mouseover",()=>{
+        element.style.color="yellow"
+       
+    })
+    element.addEventListener("mouseout",()=>{
+        element.style.color="white"
+       
+    })
+    
+})
