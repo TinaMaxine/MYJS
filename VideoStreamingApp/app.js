@@ -110,3 +110,10 @@ function TextChange(){
 //     console.log(videoLinks);
 //   })
 //   .catch(error => console.error(error));
+
+function urlChange(){
+    window.location.href = "./PlayerPage.html";         
+    var videoUrl=document.querySelector(".youtubeUrl")
+videoUrl.src="https://youtu.be/jjudmcSxzpc"
+
+}
