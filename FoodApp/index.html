@@ -61,15 +61,16 @@
       </div>
       <div class="signin "><a class="underline " href="#">Sign In</a>  for your recent addresses </div>
     </div>
-
-
+    
   </div>
   <div class="login-popup  h-[400px]  w-full absolute flex  justify-center  bottom-40  invisible">
-<div class="h-[400px] w-[400px] bg-white flex items-center justify-center">
-  <form class="flex justify-center items-center flex-col" action="" >
+    <div class="h-[400px] w-[400px] bg-white flex items-center justify-center flex-col">
+      <div class=" text-red-600 absolute top-[0px] w-[400px] flex justify-end items-center p-2 bg-gray-400" > <button type="button" class="close-button" onclick="closePopup()"><i class="fa-solid fa-xmark"></i></button></div>
+   <form class="flex justify-center items-center flex-col" action="" >
     <input type="text" class="placeHolder mb-10 "  placeholder=" Username ">
     <input type="text" class="placeHolder  "   placeholder=" Password ">
     <button type="submit" class="bg-[rgb(247,198,16)] font-semibold rounded-lg m-3 p-2 pl-3 pr-3 mt-5 ">Log in</button>
+    <!-- <span>Already a member? <a href="#">Sign up</a></span> -->
   </form>
 
 </div>
@@ -83,6 +84,12 @@ function popupFun(){
   containerBlur.style.filter="blur(5px)"
   popup.style.visibility="visible"
 console.log(" I really lreaerhfbsjidbfjkn");
+}
+const close=document.querySelector(".close-button")
+function closePopup(){
+  containerBlur.style.filter="blur(0px)"
+  popup.style.visibility="hidden"
+  console.log(" Idiottt");
 }
 
 </script>
