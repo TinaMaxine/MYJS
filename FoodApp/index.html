@@ -173,9 +173,15 @@ function filterCards(query) {
     querywithoutBias=card.classList.contains(query);
     return querywithoutBias;
   });
+  if(query==""){
+    allCards.forEach((card) => {
+    card.style.display = "block";
+  });
+  }
 
-  // hide all cards
-  allCards.forEach((card) => {
+else{
+    // hide all cards
+    allCards.forEach((card) => {
     card.style.display = "none";
   });
 
@@ -183,6 +189,7 @@ function filterCards(query) {
   filteredCards.forEach((card) => {
     card.style.display = "block";
   });
+}
 }
 
 
