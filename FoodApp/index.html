@@ -21,7 +21,7 @@
 </head>
 
 <body >
-  <div class="container h-screen w-full relative  "
+  <div class="container h-[100vh] w-full relative  "
     style="background-image: url(./pizzaPic.jpg); background-repeat: no-repeat; background-size: cover;">
     <div class=" p-2 navigation h-20 w-full bg-transparent absolute text-white flex justify-between items-center  ">
       <div class="menu flex justify-center items-center "><svg class="text-white  w-8 h-8 font-bold "
@@ -76,6 +76,69 @@
 </div>
   </div>
 
+  <br>
+  <br>
+  <h1 class="menu-heading flex justify-center items-center text-4xl">Our Menu</h1>
+  <br>
+  <div class="filter flex justify-center items-center">
+    <input class="filter-input text-black border border-solid border-black" type="text" placeholder="Search food">
+    <button type="submit" onclick="mySearch()"><i class="fa-solid fa-search"></i></button>
+  </div>
+  <br>
+  <div class="cards-container flex w-full h-100vh justify-around items-center flex-wrap ">
+    <div class="cat-11 flex flex-col w-[300px] mb-5">
+      <img class="img-1 w-[300px] h-[350px] rounded-lg" src="./fast-food.jpg" alt="" >
+      <p class="cat-p1 flex justify-center  items-center">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Incidunt, excepturi.</p>
+      <span>lorem</span>
+    </div>
+    <div class="cat-11 flex flex-col w-[300px] mb-5">
+      <img class="img-1 w-[300px] h-[350px] rounded-lg " src="./1980-crunchy-chicken-twisties-drumsticks-951509-1.jpg" alt="">
+      <p class="cat-p1 flex justify-center items-center">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Incidunt, excepturi.</p>
+      <span>lorem</span>
+    </div>
+    <div class="cat-11 flex flex-col w-[300px] mb-5">
+      <img class="img-1 w-[300px] h-[350px] rounded-lg" src="./american-desserts-whoopie-pies.jpg" alt="">
+      <p class="cat-p1 flex justify-center items-center">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Incidunt, excepturi.</p>
+      <span>lorem</span>
+    </div>
+    <div class="cat-11 flex flex-col w-[300px] mb-5">
+      <img class="img-1 w-[300px] h-[350px] rounded-lg" src="./ansh-fast-food-azamgarh-fast-food-7hn09av3hk.webp" alt="">
+      <p class="cat-p1 flex justify-center items-center">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Incidunt, excepturi.</p>
+      <span>lorem</span>
+    </div>
+    <div class="cat-11 flex flex-col w-[300px] mb-5">
+      <img class="img-1 w-[300px] h-[350px] rounded-lg" src="./fast-food.jpg" alt="" >
+      <p class="cat-p1 flex justify-center  items-center">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Incidunt, excepturi.</p>
+      <span>lorem</span>
+    </div>
+    <div class="cat-11 flex flex-col w-[300px] mb-5">
+      <img class="img-1 w-[300px] h-[350px] rounded-lg" src="./fast-food.jpg" alt="" >
+      <p class="cat-p1 flex justify-center  items-center">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Incidunt, excepturi.</p>
+      <span>lorem</span>
+    </div>
+    <div class="cat-11 fast-food fast fastfood flex flex-col w-[300px] mb-5">
+      <img class="img-1 w-[300px] h-[350px] rounded-lg" src="./noodles-july19.jpg" alt="" >
+      <p class="cat-p1 flex justify-center  items-center">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Incidunt, excepturi.</p>
+      <span>lorem</span>
+    </div>
+    <div class="cat-11 fast-food fast fastfood flex flex-col w-[300px] mb-5">
+      <img class="img-1 w-[300px] h-[350px] rounded-lg" src="./noodles-july19.jpg" alt="" >
+      <p class="cat-p1 flex justify-center  items-center">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Incidunt, excepturi.</p>
+      <span>lorem</span>
+    </div>
+    <div class="cat-11 fast-food fast fastfood flex flex-col w-[300px] mb-5">
+      <img class="img-1 w-[300px] h-[350px] rounded-lg" src="./noodles-july19.jpg" alt="" >
+      <p class="cat-p1 flex justify-center  items-center">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Incidunt, excepturi.</p>
+      <span>lorem</span>
+    </div>
+    <div class="cat-11 fast-food fast fastfood flex flex-col w-[300px] mb-5">
+      <img class="img-1 w-[300px] h-[350px] rounded-lg" src="./fast-food-restaurants-850x476.webp" alt="" >
+      <p class="cat-p1 flex justify-center  items-center">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Incidunt, excepturi.</p>
+      <span>lorem</span>
+    </div>
+    
+  </div>
+
 </body>
 <script>
 const popup=document.querySelector(".login-popup")
@@ -91,6 +154,45 @@ function closePopup(){
   popup.style.visibility="hidden"
   console.log(" Idiottt");
 }
+
+//for filtering
+const fill_in=document.querySelector(".filter-input");
+
+function mySearch(){
+  var input=fill_in.value;
+  console.log(input);
+  filterCards(input);
+}
+//for fast-food
+const container_products=document.querySelector(".cards-container");
+const allCards=Array.from(container_products.querySelectorAll(".cat-11"));
+
+function filterCards(query) {
+  // filter the cards based on the query
+  const filteredCards = allCards.filter((card) => {
+    querywithoutBias=card.classList.contains(query);
+    return querywithoutBias;
+  });
+
+  // hide all cards
+  allCards.forEach((card) => {
+    card.style.display = "none";
+  });
+
+  // show the filtered cards
+  filteredCards.forEach((card) => {
+    card.style.display = "block";
+  });
+}
+
+
+
+
+
+
+
+
+
 
 </script>
 
