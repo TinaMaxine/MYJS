@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+   
+        <div class="container h-[100vh] w-full relative bg-gray-400  ">
+        <!-- style="background-image: url(./pizzaPic.jpg); background-repeat: no-repeat; background-size: cover;" -->
+        <div class=" p-2 navigation h-20 w-full bg-transparent absolute text-white flex justify-between items-center  ">
+          <div class="menu flex justify-center items-center "><svg class="text-black  w-8 h-8 font-bold "
+              xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-list"
+              viewBox="0 0 16 16">
+              <path fill-rule="evenodd"
+                d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z" />
+            </svg>
+            <div class="logo pl-10 text-4xl text-[rgb(247,198,16)] ">Uber <span class="font-bold">Eats </span> </div>
+          </div>
+    
+          <div class="buttons flex justify-around w-[300px] text-lg text-red-400 font-semibold  items-center ">
+        
+          </div>
+        </div>
+        <div class="restaurant pt-40 flex justify-center items-center  ">
+            <div class="res-1 flex flex-col justify-center mr-[20px]  w-[300px] h-full border border-black rounded-[2px]">
+            <div class=" w-[300px] h-[180px] bg-red-800 " style="background-image: url(./res-1.jpg); background-position: center ; background-size: cover;">
+            </div>
+            <div class="rest-name bg-white ">
+                restaurant 1 Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum, voluptatum!</div>
+            <div class="rest-name bg-white ">restaurant 1</div>
+        </div>
+        <div class="res-1 flex flex-col justify-center mr-[20px]  w-[300px] h-full border border-black rounded-[2px]">
+            <div class=" w-[300px] h-[180px] bg-red-800 " style="background-image: url(./res-1.jpg); background-position: center ; background-size: cover;">
+            </div>
+            <div class="rest-name bg-white ">
+                restaurant 1 Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum, voluptatum!</div>
+            <div class="rest-name bg-white">restaurant 1</div>
+        </div>
+        <div class="res-1 flex flex-col justify-center mr-[20px]  w-[300px] h-full border border-black rounded-[2px]">
+            <div class=" w-[300px] h-[180px] bg-red-800 " style="background-image: url(./res-1.jpg); background-position: center ; background-size: cover;">
+            </div>
+            <div class="rest-name bg-white ">
+                restaurant 1 Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum, voluptatum!</div>
+            <div class="rest-name bg-white">restaurant 1</div>
+        </div>
+        <div class="res-1 flex flex-col justify-center  w-[300px] h-full border border-black rounded-[2px]">
+            <div class=" w-[300px] h-[180px] bg-red-800 " style="background-image: url(./res-1.jpg); background-position: center ; background-size: cover;">
+            </div>
+            <div class="rest-name bg-white  ">
+                restaurant 1 Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum, voluptatum!</div>
+            <div class="rest-name bg-white">restaurant 1</div>
+        </div>
+          
+           
+        </div>
+    </div>
+    <script>
+        const res1 = document.querySelectorAll(".res-1");
+        res1.forEach((element)=>
+        {
+            element.addEventListener("mouseover",()=>{
+                element.style.transition = "all 0.3s ease-in-out";
+                element.style.transform = "scale(1.08)";
+            })
+        })
+        res1.forEach((element)=>
+        {
+            element.addEventListener("mouseout",()=>{
+                element.style.transition = "all 0.3s ease-in-out";
+                element.style.transform = "scale(1)";
+            })
+        })
+    </script>
+</body>
+</html>

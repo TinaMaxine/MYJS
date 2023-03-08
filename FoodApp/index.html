@@ -33,17 +33,21 @@
         <div class="logo pl-10 text-4xl text-[rgb(247,198,16)] ">Uber <span class="font-bold">Eats </span> </div>
       </div>
 
-      <div class="buttons flex justify-around w-80 text-lg text-red-400 font-semibold  items-center ">
+      <div class="buttons flex justify-around w-[500px] text-lg text-red-400 font-semibold  items-center ">
+
+        <div class="   hover:text-white text-[rgb(247,198,16)] rounded-full "><a href="./dine-in.html" target="_blank"  class="dine-in-link m-3 pr-2 pl-2">Dine-in</a></div>
+        <div class="   hover:text-white text-[rgb(247,198,16)] rounded-full "><a href="./dine-in.html" class=" dine-out-link m-3 pr-2 pl-2">Dine-out </a></div>
+        <div class="br w-1 h-10 bg-white " ></div>
         <div class="login  hover:bg-gray-400 text-black rounded-full bg-white"> <Button
-            class="flex justify-center items-center"> <svg class="w-7 h-7 mt-3 mb-3 ml-3"
+            class="flex justify-center items-center"> <svg class="w-7 h-6 mt-3 mb-3 ml-2"
               xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-fill"
               viewBox="0 0 16 16">
               <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3Zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z" />
             </svg>
-            <div onclick="popupFun()" class="pt-3 pb-3 pr-3 pl-1 font-sans cursor-pointer">  Log in</div>
+            <div onclick="popupFun()" class="pt-2 pb-2 pr-3 pl-1 font-sans cursor-pointer">  Log in</div>
           </Button></div>
         <div class="signup border border-solid border-black text-white rounded-full   hover:bg-gray-700 bg-black">
-          <Button class="m-3 pr-2 pl-2">Sign Up</Button>
+          <Button class="m-2 pr-2 pl-2">Sign Up</Button>
         </div>
       </div>
     </div>
@@ -63,6 +67,8 @@
     </div>
     
   </div>
+
+
   <div class="login-popup  h-[400px]  w-full absolute flex  justify-center  bottom-40  invisible">
     <div class="h-[400px] w-[400px] bg-white flex items-center justify-center flex-col">
       <div class=" text-red-600 absolute top-[0px] w-[400px] flex justify-end items-center p-2 bg-gray-400" > <button type="button" class="close-button" onclick="closePopup()"><i class="fa-solid fa-xmark"></i></button></div>
@@ -70,69 +76,98 @@
     <input type="text" class="placeHolder mb-10 "  placeholder=" Username ">
     <input type="text" class="placeHolder  "   placeholder=" Password ">
     <button type="submit" class="bg-[rgb(247,198,16)] font-semibold rounded-lg m-3 p-2 pl-3 pr-3 mt-5 ">Log in</button>
-    <!-- <span>Already a member? <a href="#">Sign up</a></span> -->
+    
   </form>
-
 </div>
-  </div>
+</div>
 
   <br>
   <br>
   <h1 class="menu-heading flex justify-center items-center text-4xl">Our Menu</h1>
   <br>
   <div class="filter flex justify-center items-center">
-    <input class="filter-input text-black border border-solid border-black" type="text" placeholder="Search food">
+    <input class="filter-input text-black border border-solid border-black" type="text" placeholder="Search our menu">
     <button type="submit" onclick="mySearch()"><i class="fa-solid fa-search"></i></button>
   </div>
   <br>
   <div class="cards-container flex w-full h-100vh justify-around items-center flex-wrap ">
-    <div class="cat-11 flex flex-col w-[300px] mb-5">
-      <img class="img-1 w-[300px] h-[350px] rounded-lg" src="./fast-food.jpg" alt="" >
+    <div class="cat-11 pizza flex flex-col w-[300px] mb-5">
+      <img class="img-1 w-[300px] h-[350px] rounded-lg" src="./pizza-1.webp" alt="" >
       <p class="cat-p1 flex justify-center  items-center">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Incidunt, excepturi.</p>
       <span>lorem</span>
     </div>
-    <div class="cat-11 flex flex-col w-[300px] mb-5">
-      <img class="img-1 w-[300px] h-[350px] rounded-lg " src="./1980-crunchy-chicken-twisties-drumsticks-951509-1.jpg" alt="">
+    <div class="cat-11 biryani chicken chickenbiryani flex flex-col w-[300px] mb-5">
+      <img class="img-1 w-[300px] h-[350px] rounded-lg " src="./biryani-1.jpg" alt="">
       <p class="cat-p1 flex justify-center items-center">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Incidunt, excepturi.</p>
       <span>lorem</span>
     </div>
-    <div class="cat-11 flex flex-col w-[300px] mb-5">
-      <img class="img-1 w-[300px] h-[350px] rounded-lg" src="./american-desserts-whoopie-pies.jpg" alt="">
+    <div class="cat-11 pizza flex flex-col w-[300px] mb-5">
+      <img class="img-1 w-[300px] h-[350px] rounded-lg" src="./pizza-2.webp" alt="">
       <p class="cat-p1 flex justify-center items-center">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Incidunt, excepturi.</p>
       <span>lorem</span>
     </div>
-    <div class="cat-11 flex flex-col w-[300px] mb-5">
-      <img class="img-1 w-[300px] h-[350px] rounded-lg" src="./ansh-fast-food-azamgarh-fast-food-7hn09av3hk.webp" alt="">
+    <div class="cat-11 dessert flex flex-col w-[300px] mb-5">
+      <img class="img-1 w-[300px] h-[350px] rounded-lg" src="./desser-3.jpg" alt="">
       <p class="cat-p1 flex justify-center items-center">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Incidunt, excepturi.</p>
       <span>lorem</span>
     </div>
-    <div class="cat-11 flex flex-col w-[300px] mb-5">
-      <img class="img-1 w-[300px] h-[350px] rounded-lg" src="./fast-food.jpg" alt="" >
+    <div class="cat-11 fast fastfood fast-food flex flex-col w-[300px] mb-5">
+      <img class="img-1 w-[300px] h-[350px] rounded-lg" src="./fast-food-1.webp" alt="" >
       <p class="cat-p1 flex justify-center  items-center">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Incidunt, excepturi.</p>
       <span>lorem</span>
     </div>
-    <div class="cat-11 flex flex-col w-[300px] mb-5">
-      <img class="img-1 w-[300px] h-[350px] rounded-lg" src="./fast-food.jpg" alt="" >
+    <div class="cat-11 dessert flex flex-col w-[300px] mb-5">
+      <img class="img-1 w-[300px] h-[350px] rounded-lg" src="./desser-4.jpg" alt="" >
       <p class="cat-p1 flex justify-center  items-center">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Incidunt, excepturi.</p>
       <span>lorem</span>
     </div>
-    <div class="cat-11 fast-food fast fastfood flex flex-col w-[300px] mb-5">
-      <img class="img-1 w-[300px] h-[350px] rounded-lg" src="./noodles-july19.jpg" alt="" >
+    <div class="cat-11 fast fastfood fast-food flex flex-col w-[300px] mb-5">
+      <img class="img-1 w-[300px] h-[350px] rounded-lg" src="./fast-food-2.jpg" alt="" >
       <p class="cat-p1 flex justify-center  items-center">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Incidunt, excepturi.</p>
       <span>lorem</span>
     </div>
-    <div class="cat-11 fast-food fast fastfood flex flex-col w-[300px] mb-5">
-      <img class="img-1 w-[300px] h-[350px] rounded-lg" src="./noodles-july19.jpg" alt="" >
+    <div class="cat-11 pizza flex flex-col w-[300px] mb-5">
+      <img class="img-1 w-[300px] h-[350px] rounded-lg" src="./pizza-4.jpg" alt="" >
       <p class="cat-p1 flex justify-center  items-center">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Incidunt, excepturi.</p>
       <span>lorem</span>
     </div>
-    <div class="cat-11 fast-food fast fastfood flex flex-col w-[300px] mb-5">
-      <img class="img-1 w-[300px] h-[350px] rounded-lg" src="./noodles-july19.jpg" alt="" >
+    <div class="cat-11 biryani flex flex-col w-[300px] mb-5">
+      <img class="img-1 w-[300px] h-[350px] rounded-lg" src="./biryani-2.webp" alt="" >
       <p class="cat-p1 flex justify-center  items-center">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Incidunt, excepturi.</p>
       <span>lorem</span>
     </div>
-    <div class="cat-11 fast-food fast fastfood flex flex-col w-[300px] mb-5">
-      <img class="img-1 w-[300px] h-[350px] rounded-lg" src="./fast-food-restaurants-850x476.webp" alt="" >
+    <div class="cat-11 dessert flex flex-col w-[300px] mb-5">
+      <img class="img-1 w-[300px] h-[350px] rounded-lg" src="./desser-2.jpg" alt="" >
+      <p class="cat-p1 flex justify-center  items-center">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Incidunt, excepturi.</p>
+      <span>lorem1</span>
+    </div>
+    <div class="cat-11 fast fastfood fast-food flex flex-col w-[300px] mb-5">
+      <img class="img-1 w-[300px] h-[350px] rounded-lg" src="./fast-food-4.jpg" alt="" >
+      <p class="cat-p1 flex justify-center  items-center">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Incidunt, excepturi.</p>
+      <span>lorem1</span>
+    </div>
+    <div class="cat-11 biryani flex flex-col w-[300px] mb-5">
+      <img class="img-1 w-[300px] h-[350px] rounded-lg" src="./biryani-3.jpg" alt="" >
+      <p class="cat-p1 flex justify-center  items-center">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Incidunt, excepturi.</p>
+      <span>lorem1</span>
+    </div>
+    <div class="cat-11 dessert flex flex-col w-[300px] mb-5">
+      <img class="img-1 w-[300px] h-[350px] rounded-lg" src="./desser-1.jpg" alt="" >
+      <p class="cat-p1 flex justify-center  items-center">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Incidunt, excepturi.</p>
+      <span>lorem1</span>
+    </div>
+    <div class="cat-11 pizza flex flex-col w-[300px] mb-5">
+      <img class="img-1 w-[300px] h-[350px] rounded-lg" src="./pizza-5.jpg" alt="" >
+      <p class="cat-p1 flex justify-center  items-center">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Incidunt, excepturi.</p>
+      <span>lorem1</span>
+    </div>
+    <div class="cat-11 fast fastfood fast-food flex flex-col w-[300px] mb-5">
+      <img class="img-1 w-[300px] h-[350px] rounded-lg" src="./fast-food-3.jpg" alt="" >
+      <p class="cat-p1 flex justify-center  items-center">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Incidunt, excepturi.</p>
+      <span>lorem1</span>
+    </div>
+    <div class="cat-11 biryani flex flex-col w-[300px] mb-5">
+      <img class="img-1 w-[300px] h-[350px] rounded-lg" src="./biryani-4.webp" alt="" >
       <p class="cat-p1 flex justify-center  items-center">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Incidunt, excepturi.</p>
       <span>lorem1</span>
     </div>
@@ -154,6 +189,7 @@ function closePopup(){
   console.log(" Idiottt");
 }
 
+
 //for filtering
 const fill_in=document.querySelector(".filter-input");
 
@@ -162,6 +198,14 @@ function mySearch(){
   console.log(input);
   filterCards(input);
 }
+fill_in.addEventListener('keyup',(e)=>{
+            if(e.keyCode===13){
+                    mySearch();
+            }
+        }
+        )
+
+
 //for fast-food
 const container_products=document.querySelector(".cards-container");
 const allCards=Array.from(container_products.querySelectorAll(".cat-11"));
@@ -173,24 +217,53 @@ function filterCards(query) {
     return querywithoutBias;
   });
   if(query==""){
+    const noProductFound = container_products.querySelector(".no-product");
+  if (noProductFound) {
+    container_products.removeChild(noProductFound);
+  }
     allCards.forEach((card) => {
     card.style.display = "block";
   });
   }
 
-else{
+else if(filteredCards.length==0) {
     // hide all cards
     allCards.forEach((card) => {
     card.style.display = "none";
   });
+  const noProductFound = container_products.querySelector(".no-product");
+  if (!noProductFound) {
+    // create a new "No product found" message and append it to the container
+    const noProductFoundNew = document.createElement("p");
+    noProductFoundNew.textContent = "No product found.";
+    noProductFoundNew.className = "no-product";
+    noProductFoundNew.style.color = "black";
+    container_products.appendChild(noProductFoundNew);
+  }
+    // const noProductFound1=document.querySelector(".no-product");
 
   // show the filtered cards
-  filteredCards.forEach((card) => {
+}
+else{
+
+  const noProductFound = container_products.querySelector(".no-product");
+  if (noProductFound) {
+    container_products.removeChild(noProductFound);
+  }
+
+  allCards.forEach((card) => {
+    card.style.display = "none";
+  })
+      filteredCards.forEach((card) => {
     card.style.display = "block";
   });
-}
+  }
 }
 
+//for dine in link
+
+// const dilink=document.querySelector('.dine-in-link');
+// dlink.
 
 
 
