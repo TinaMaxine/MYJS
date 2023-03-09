@@ -35,8 +35,8 @@
 
       <div class="buttons flex justify-around w-[500px] text-lg text-red-400 font-semibold  items-center ">
 
-        <div class="   hover:text-white text-[rgb(247,198,16)] rounded-full "><a href="./dine-in.html" target="_blank"  class="dine-in-link m-3 pr-2 pl-2">Dine-in</a></div>
-        <div class="   hover:text-white text-[rgb(247,198,16)] rounded-full "><a href="./dine-in.html" class=" dine-out-link m-3 pr-2 pl-2">Dine-out </a></div>
+        <div class="   hover:text-white text-[15px] text-[rgb(247,198,16)] rounded-full "><a href="./dine-in.html" target="_blank"  class="dine-in-link m-3 pr-2 pl-2">Dine-in</a></div>
+        <div class="   hover:text-white text-[15px] text-[rgb(247,198,16)] rounded-full "><a href="./dine-in.html" class=" dine-out-link m-3 pr-2 pl-2">Dine-out </a></div>
         <div class="br w-1 h-10 bg-white " ></div>
         <div class="login  hover:bg-gray-400 text-black rounded-full bg-white"> <Button
             class="flex justify-center items-center"> <svg class="w-7 h-6 mt-3 mb-3 ml-2"
@@ -44,10 +44,10 @@
               viewBox="0 0 16 16">
               <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3Zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z" />
             </svg>
-            <div onclick="popupFun()" class="pt-2 pb-2 pr-3 pl-1 font-sans cursor-pointer">  Log in</div>
+            <div onclick="popupFun()" class="pt-2 pb-2 pr-3 pl-1 text-[15px] font-sans cursor-pointer">  Log in</div>
           </Button></div>
         <div class="signup border border-solid border-black text-white rounded-full   hover:bg-gray-700 bg-black">
-          <Button class="m-2 pr-2 pl-2">Sign Up</Button>
+          <Button class="text-[15px] m-2 pr-2 pl-2">Sign Up</Button>
         </div>
       </div>
     </div>
@@ -194,7 +194,7 @@ function closePopup(){
 const fill_in=document.querySelector(".filter-input");
 
 function mySearch(){
-  var input=fill_in.valu ;
+  var input=fill_in.value;
   console.log(input);
   filterCards(input);
 }
@@ -235,7 +235,7 @@ else if(filteredCards.length==0) {
   if (!noProductFound) {
     // create a new "No product found" message and append it to the container
     const noProductFoundNew = document.createElement("p");
-    noProductFoundNew.textContent = "No product found.";
+    noProductFoundNew.textContent = "No product found. Try with pizza, biryani, fast-food";
     noProductFoundNew.className = "no-product";
     noProductFoundNew.style.color = "black";
     container_products.appendChild(noProductFoundNew);
