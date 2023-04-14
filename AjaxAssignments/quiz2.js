@@ -1,7 +1,7 @@
 function show(){
-    console.log("Hello");
+    return "Hello";
 }
 function demo(fun){
-    return fun;
+    console.log(fun);
 }
 setTimeout(demo(show),0);
